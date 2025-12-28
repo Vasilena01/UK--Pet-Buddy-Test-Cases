@@ -130,6 +130,13 @@
       ],
       "value": ""
     }, {
+      "id": "ac1521ef-57ff-41e4-adfe-c668dd1b8564",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Math.random()",
+      "targets": [],
+      "value": "randomNumber"
+    }, {
       "id": "3890cc23-b52e-4119-96b8-7ad145106256",
       "comment": "",
       "command": "type",
@@ -141,7 +148,7 @@
         ["xpath=//input[@id='emailAddress']", "xpath:attributes"],
         ["xpath=//div[4]/div[2]/input", "xpath:position"]
       ],
-      "value": "v.stanoyskaa@gmail.com"
+      "value": "vasi${randomNumber}@gmail.com"
     }, {
       "id": "af026ecd-b376-4106-b689-2fb27c822ea8",
       "comment": "",
@@ -242,10 +249,24 @@
         ["xpath=//a[contains(.,'Моят профил')]", "xpath:innerText"]
       ],
       "value": ""
+    }, {
+      "id": "63115e75-cb2f-41bb-a090-8a3660d0d590",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.pathname",
+      "targets": [],
+      "value": "currentPath"
+    }, {
+      "id": "a39d5c1c-f9cb-4643-8877-20d6c220d20f",
+      "comment": "",
+      "command": "assert",
+      "target": "currentPath",
+      "targets": [],
+      "value": "/my-profile/"
     }]
   }, {
     "id": "216f950c-68f5-44f8-850f-8eeca00bb45e",
-    "name": "LogInWithCorrectData",
+    "name": "LogInUserWithCorrectData",
     "commands": [{
       "id": "8c1067ad-d5ef-4314-91fa-7e0722b8a844",
       "comment": "",
@@ -382,7 +403,7 @@
         ["xpath=//input[@id='username']", "xpath:attributes"],
         ["xpath=//input", "xpath:position"]
       ],
-      "value": "v.stanoyska@gmail.com"
+      "value": "v.stanoyskaa@gmail.com"
     }, {
       "id": "097a3a66-296f-4bd4-8327-eb6ffbea3594",
       "comment": "",
@@ -863,7 +884,7 @@
         ["xpath=//input[@id='username']", "xpath:attributes"],
         ["xpath=//input", "xpath:position"]
       ],
-      "value": "v.stanoyska@gmail.com"
+      "value": "v.stanoyskaa@gmail.com"
     }, {
       "id": "7bffedd0-cf8c-4d95-9fbd-1858911bc42b",
       "comment": "",
@@ -968,7 +989,7 @@
     }]
   }, {
     "id": "8f648859-be84-492a-a531-6ac7767082e5",
-    "name": "AddPetProfile",
+    "name": "AddNewUserPetProfile",
     "commands": [{
       "id": "8ca215aa-7b20-49a2-833b-d18e558b2755",
       "comment": "",
@@ -1022,7 +1043,7 @@
         ["xpath=//input[@id='username']", "xpath:attributes"],
         ["xpath=//input", "xpath:position"]
       ],
-      "value": "v.stanoyska@gmail.com"
+      "value": "v.stanoyskaa@gmail.com"
     }, {
       "id": "10aca6e4-1e3e-429b-93e4-a5d836dbd2dd",
       "comment": "",
@@ -1531,7 +1552,7 @@
         ["xpath=//input[@id='username']", "xpath:attributes"],
         ["xpath=//input", "xpath:position"]
       ],
-      "value": "v.stanoyska@gmail.com"
+      "value": "v.stanoyskaa@gmail.com"
     }, {
       "id": "fbd0f54a-cd64-4a4e-baef-cd14fdbaa956",
       "comment": "",
@@ -1691,7 +1712,7 @@
     }]
   }, {
     "id": "aa353fc6-c1fc-4f81-ac10-1ec8ec755ce6",
-    "name": "AddNewUserWithAlreadyUsedEmail",
+    "name": "RegisterNewUserWithAlreadyUsedEmail",
     "commands": [{
       "id": "d38bb749-62ec-41c5-a7b5-a177d0c322a7",
       "comment": "",
@@ -1985,7 +2006,7 @@
         ["xpath=//input[@id='username']", "xpath:attributes"],
         ["xpath=//input", "xpath:position"]
       ],
-      "value": "v.stanoyska@gmail.com"
+      "value": "v.stanoyskaa@gmail.com"
     }, {
       "id": "f98b9493-9021-4495-ad92-fa42f5abc348",
       "comment": "",
@@ -2195,6 +2216,246 @@
       ],
       "value": ""
     }]
+  }, {
+    "id": "abac16b1-382e-4459-a599-6d5b75a7ed93",
+    "name": "AddNewUserCertainEmail",
+    "commands": [{
+      "id": "6b490d32-1baa-4aba-bcd5-6b06c64b572a",
+      "comment": "",
+      "command": "open",
+      "target": "/vhod",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8132eb80-5d8a-4adb-b4dc-5466109e1092",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1200x1039",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8931387a-c04b-4a76-b199-1608074b96db",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return !!document.querySelector('.woocommerce-MyAccount-navigation-link--edit-account > a')",
+      "targets": [],
+      "value": "isPresent"
+    }, {
+      "id": "7cf0aa05-1a55-4906-933c-f8e587e6f2a2",
+      "comment": "",
+      "command": "if",
+      "target": "${isPresent} === true",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "44a9436a-04e4-4d66-9f2a-c3a407005cc4",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Излизане",
+      "targets": [
+        ["linkText=Излизане", "linkText"],
+        ["css=.navbar .woocommerce-MyAccount-navigation-link--customer-logout > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Излизане')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://petbuddy.bg/my-profile/customer-logout/?_wpnonce=e141db9483')]", "xpath:href"],
+        ["xpath=//li[9]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Излизане')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "013bae12-7484-4ed2-9bb4-ed98b5a35314",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return !!document.querySelector('.woocommerce-message > a')",
+      "targets": [],
+      "value": "isMessageLinkPresent"
+    }, {
+      "id": "bb53dda9-8355-4d97-b85b-d60b6757a5c7",
+      "comment": "",
+      "command": "if",
+      "target": "${isMessageLinkPresent} === true",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "78de7f41-c68e-4a5a-a943-9099ab13a2b8",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Потвърдете и излете",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "550689c8-334e-43d4-a360-f7fc5c268ed5",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "03dc4d42-1366-4495-8d30-89de32a7244e",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7af768cc-cf1f-4985-9c55-bf4ce220d469",
+      "comment": "",
+      "command": "open",
+      "target": "/registratsiya",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3277839e-46e0-445a-969d-0537bc829c64",
+      "comment": "",
+      "command": "click",
+      "target": "id=fullName",
+      "targets": [
+        ["id=fullName", "id"],
+        ["name=fullName", "name"],
+        ["css=#fullName", "css:finder"],
+        ["xpath=//input[@id='fullName']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "559aed24-f48a-42f0-9830-fd5ebb527ee3",
+      "comment": "",
+      "command": "type",
+      "target": "id=fullName",
+      "targets": [
+        ["id=fullName", "id"],
+        ["name=fullName", "name"],
+        ["css=#fullName", "css:finder"],
+        ["xpath=//input[@id='fullName']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Василена"
+    }, {
+      "id": "4a16ceca-a507-47ab-a5d9-fc3eddb5d950",
+      "comment": "",
+      "command": "click",
+      "target": "id=emailAddress",
+      "targets": [
+        ["id=emailAddress", "id"],
+        ["name=emailAddress", "name"],
+        ["css=#emailAddress", "css:finder"],
+        ["xpath=//input[@id='emailAddress']", "xpath:attributes"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bec5e3df-4690-4109-9056-23097af1929e",
+      "comment": "",
+      "command": "type",
+      "target": "id=emailAddress",
+      "targets": [
+        ["id=emailAddress", "id"],
+        ["name=emailAddress", "name"],
+        ["css=#emailAddress", "css:finder"],
+        ["xpath=//input[@id='emailAddress']", "xpath:attributes"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": "v.stanoyskaa@gmail.com"
+    }, {
+      "id": "2051c8b8-72bb-4504-8813-38c2cdc01ab9",
+      "comment": "",
+      "command": "click",
+      "target": "id=phoneNumber",
+      "targets": [
+        ["id=phoneNumber", "id"],
+        ["name=phoneNumber", "name"],
+        ["css=#phoneNumber", "css:finder"],
+        ["xpath=//input[@id='phoneNumber']", "xpath:attributes"],
+        ["xpath=//div[5]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "89e743aa-ca22-43ea-8b74-e3ca54c460fe",
+      "comment": "",
+      "command": "type",
+      "target": "id=phoneNumber",
+      "targets": [
+        ["id=phoneNumber", "id"],
+        ["name=phoneNumber", "name"],
+        ["css=#phoneNumber", "css:finder"],
+        ["xpath=//input[@id='phoneNumber']", "xpath:attributes"],
+        ["xpath=//div[5]/div[2]/input", "xpath:position"]
+      ],
+      "value": "0897878058"
+    }, {
+      "id": "4f5cce8f-806e-4659-87b9-4871c0cf98ae",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3284a2ae-37e7-44ba-a654-da05a3df557e",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "1234"
+    }, {
+      "id": "57395073-0bc6-41dd-a684-9b280b64683c",
+      "comment": "",
+      "command": "click",
+      "target": "id=termsOfUse",
+      "targets": [
+        ["id=termsOfUse", "id"],
+        ["name=termsOfUse", "name"],
+        ["css=#termsOfUse", "css:finder"],
+        ["xpath=//input[@id='termsOfUse']", "xpath:attributes"],
+        ["xpath=//label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3acd1710-b521-487d-8f94-7cd682727484",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//input[@value='Регистрирай се']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2236578c-73ca-4440-8e2d-60c57c5ad0fe",
+      "comment": "",
+      "command": "click",
+      "target": "id=Layer_1",
+      "targets": [
+        ["id=Layer_1", "id"],
+        ["css=a > #Layer_1", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "811168a2-7a11-4e44-8720-85220b412510",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Моят профил",
+      "targets": [
+        ["linkText=Моят профил", "linkText"],
+        ["css=.woocommerce-MyAccount-navigation-link--dashboard > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Моят профил')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://petbuddy.bg/my-profile/')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Моят профил')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "e9ee2cf8-231e-4ab4-9a77-311d7d4b62de",
@@ -2202,7 +2463,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["99512dfc-84a3-4201-ae9b-93ab3cd8f9e1", "aa353fc6-c1fc-4f81-ac10-1ec8ec755ce6", "216f950c-68f5-44f8-850f-8eeca00bb45e", "22328705-bd4f-4535-952b-3bd5041de260", "5cbeeb42-36f0-40c3-a441-1a7d767462e5", "a56d84bf-6a70-4279-b12a-05aa5f36d5aa"]
+    "tests": ["99512dfc-84a3-4201-ae9b-93ab3cd8f9e1", "abac16b1-382e-4459-a599-6d5b75a7ed93", "aa353fc6-c1fc-4f81-ac10-1ec8ec755ce6", "216f950c-68f5-44f8-850f-8eeca00bb45e", "22328705-bd4f-4535-952b-3bd5041de260", "5cbeeb42-36f0-40c3-a441-1a7d767462e5", "a56d84bf-6a70-4279-b12a-05aa5f36d5aa"]
   }],
   "urls": ["https://petbuddy.bg/"],
   "plugins": []
