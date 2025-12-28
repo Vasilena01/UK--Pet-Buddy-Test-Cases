@@ -1,0 +1,21 @@
+{
+  "id": "d0a18376-be05-4ef4-9dab-31df32034847",
+  "version": "2.0",
+  "name": "PetBuddy Test Cases",
+  "url": "",
+  "tests": [{
+    "id": "7405f4f9-0fb7-498b-a13e-e01e176f155f",
+    "name": "Untitled",
+    "commands": []
+  }],
+  "suites": [{
+    "id": "28bbbd92-9091-4bf0-8cdb-9ac8211b9da8",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["7405f4f9-0fb7-498b-a13e-e01e176f155f"]
+  }],
+  "urls": [],
+  "plugins": []
+}
