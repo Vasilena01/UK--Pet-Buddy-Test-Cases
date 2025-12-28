@@ -269,10 +269,6 @@
       "targets": [],
       "value": "true"
     }]
-  }, {
-    "id": "08ea7fcd-7a76-4491-b5a0-aeb57e8fdc4c",
-    "name": "RemoveProductFromWishList",
-    "commands": []
   }],
   "suites": [{
     "id": "ea25b96d-8b31-44ee-b5ce-45d3992c472f",
