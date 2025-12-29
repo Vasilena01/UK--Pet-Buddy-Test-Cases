@@ -200,7 +200,7 @@
         ["xpath=//input[@id='password']", "xpath:attributes"],
         ["xpath=//div[2]/div/input", "xpath:position"]
       ],
-      "value": "1234"
+      "value": "Vasilena1234"
     }, {
       "id": "ce623c8a-2c4f-4c17-a004-a5fd8ee40f5d",
       "comment": "",
@@ -314,7 +314,7 @@
         ["xpath=//input[@id='password']", "xpath:attributes"],
         ["xpath=//div[2]/div/input", "xpath:position"]
       ],
-      "value": "1234"
+      "value": "Vasilena1234"
     }, {
       "id": "55407f40-cbb6-478d-a5e9-2dae2518646c",
       "comment": "",
@@ -389,7 +389,7 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "19743f92-1997-4b9f-af7f-12b0e66269df",
+      "id": "271cef8a-5066-4516-aa1b-cd6cf6ebc05e",
       "comment": "",
       "command": "click",
       "target": "linkText=Излизане",
@@ -459,6 +459,19 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "19743f92-1997-4b9f-af7f-12b0e66269df",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Излизане",
+      "targets": [
+        ["linkText=Излизане", "linkText"],
+        ["css=.woocommerce .woocommerce-MyAccount-navigation-link--customer-logout > a", "css:finder"],
+        ["xpath=(//a[contains(text(),'Излизане')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'https://petbuddy.bg/my-profile/customer-logout/?_wpnonce=6049862fcf')])[2]", "xpath:href"],
+        ["xpath=//div[4]/div/div/nav/ul/li[9]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
       "id": "172b8575-773f-4ec3-9514-042a0d29688b",
       "comment": "",
       "command": "click",
@@ -516,7 +529,7 @@
         ["xpath=//input[@id='password']", "xpath:attributes"],
         ["xpath=//span/input", "xpath:position"]
       ],
-      "value": "1234"
+      "value": "Vasilena1234"
     }, {
       "id": "82fc3b4e-cb80-490c-b93f-4c4783860ce8",
       "comment": "",
@@ -660,7 +673,7 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "d0890a6b-51f6-459c-9921-9de5aa8ff967",
+      "id": "3700d298-c375-455a-a788-b2f957a04d6e",
       "comment": "",
       "command": "click",
       "target": "linkText=Излизане",
@@ -723,7 +736,7 @@
         ["xpath=//input[@id='password']", "xpath:attributes"],
         ["xpath=//span/input", "xpath:position"]
       ],
-      "value": "1234"
+      "value": "Vasilena1234"
     }, {
       "id": "49093a1c-85ed-42db-86d8-8529234e8b84",
       "comment": "",
@@ -852,7 +865,7 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "20fa1adc-e32e-41ec-ad93-8484700ed398",
+      "id": "cee33700-6910-4ae6-ab94-27f2ffb51cdb",
       "comment": "",
       "command": "click",
       "target": "linkText=Излизане",
@@ -1038,7 +1051,7 @@
         ["xpath=//input[@id='password']", "xpath:attributes"],
         ["xpath=//span/input", "xpath:position"]
       ],
-      "value": "1234"
+      "value": "Vasilena1234"
     }, {
       "id": "c8b9669b-c8e1-499e-9bcb-e1dc79deea4a",
       "comment": "",
@@ -1226,7 +1239,7 @@
         ["xpath=//input[@id='password']", "xpath:attributes"],
         ["xpath=//span/input", "xpath:position"]
       ],
-      "value": "1234"
+      "value": "Vasilena1234"
     }, {
       "id": "569c68ae-512f-444e-a386-d2f10e399602",
       "comment": "",
@@ -1761,7 +1774,7 @@
         ["xpath=//input[@id='password']", "xpath:attributes"],
         ["xpath=//span/input", "xpath:position"]
       ],
-      "value": "1234"
+      "value": "Vasilena1234"
     }, {
       "id": "cb69acfd-d9ea-4b2f-a88f-80dcf2666ca6",
       "comment": "",
@@ -1879,10 +1892,31 @@
       ],
       "value": ""
     }, {
+      "id": "5a5a45db-6432-464e-99c1-23e3839e5e4f",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const xpath = \"//*[(contains(@class, 'pet-title') or contains(@class, 'woocommerce-MyAccount-navigation-link--pets')) and contains(., 'Nala New')]\"; return !!document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;",
+      "targets": [],
+      "value": "isPetVisible"
+    }, {
+      "id": "217f2531-1b88-4c9f-897f-a41988bccb54",
+      "comment": "",
+      "command": "if",
+      "target": "${isPetVisible} === true",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "2782948a-31c1-4c9b-897b-ec971f369b61",
       "comment": "",
       "command": "assertElementPresent",
-      "target": "xpath=//*[contains(@class, 'pet-title') or contains(@class, 'woocommerce-MyAccount-navigation-link--pets')][contains(., 'Nala New')]",
+      "target": "xpath=//*[(contains(@class, 'pet-title') or contains(@class, 'woocommerce-MyAccount-navigation-link--pets')) and contains(., 'Nala New')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "134184cd-ae41-4e42-aa58-50f48b0540a5",
+      "comment": "",
+      "command": "end",
+      "target": "",
       "targets": [],
       "value": ""
     }]
@@ -2083,7 +2117,7 @@
         ["xpath=//input[@id='password']", "xpath:attributes"],
         ["xpath=//div[2]/div/input", "xpath:position"]
       ],
-      "value": "1234"
+      "value": "Vasilena1234"
     }, {
       "id": "0856e8c0-96b7-484e-a8a5-35f9a2339205",
       "comment": "",
@@ -2222,7 +2256,7 @@
         ["xpath=//input[@id='password']", "xpath:attributes"],
         ["xpath=//span/input", "xpath:position"]
       ],
-      "value": "1234"
+      "value": "Vasilena1234"
     }, {
       "id": "1c8d7df2-3eff-4940-bef2-99e7477955ab",
       "comment": "",
@@ -2554,7 +2588,7 @@
         ["xpath=//input[@id='password']", "xpath:attributes"],
         ["xpath=//div[2]/div/input", "xpath:position"]
       ],
-      "value": "1234"
+      "value": "Vasilena1234"
     }, {
       "id": "57395073-0bc6-41dd-a684-9b280b64683c",
       "comment": "",
@@ -2654,7 +2688,7 @@
         ["xpath=//input[@id='password']", "xpath:attributes"],
         ["xpath=//div[2]/div/input", "xpath:position"]
       ],
-      "value": "1234"
+      "value": "Vasilena1234"
     }, {
       "id": "c147e99d-b4d7-47a3-9836-e9f544f3a9b4",
       "comment": "",
@@ -2696,6 +2730,767 @@
         ["xpath=//p/input", "xpath:position"]
       ],
       "value": "Василена"
+    }]
+  }, {
+    "id": "0cff323b-2251-4a85-9b16-047a4106d88f",
+    "name": "EditUserProfileChangeLastName",
+    "commands": [{
+      "id": "aedb0eb9-9086-4674-bfb9-42644d746548",
+      "comment": "",
+      "command": "open",
+      "target": "/vhod",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e4e1be3d-7b22-4706-ac33-7b70891e4d4c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1200x1039",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b8398cab-5153-46d8-9461-843b658515bb",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return !document.querySelector('.woocommerce-MyAccount-navigation-link--edit-account > a')",
+      "targets": [],
+      "value": "isPresent"
+    }, {
+      "id": "8e841ca5-c95b-4f1f-9a7d-e87decb3bb8a",
+      "comment": "",
+      "command": "if",
+      "target": "${isPresent} === true",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "88ea9644-7d48-490c-8df6-d61e92469297",
+      "comment": "",
+      "command": "click",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3197af45-9a2e-45f2-9076-77e5e78c4e10",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return (typeof newEmail !== 'undefined' && vars.get('newEmail')) ? vars.get('newEmail') : \"vasilena.stanoyska@gmail.com\"",
+      "targets": [],
+      "value": "newEmail"
+    }, {
+      "id": "3b320ffa-2592-4c10-8dc9-810c5f81c223",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${newEmail}"
+    }, {
+      "id": "e00dee92-65b5-401e-bc69-bbec1e97c2c0",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "95f5a08a-89b4-4b19-a3a3-6ffbe182e253",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": "Vasilena1234"
+    }, {
+      "id": "5aeab7b0-9370-4a15-8feb-0d7628df86c2",
+      "comment": "",
+      "command": "click",
+      "target": "name=login",
+      "targets": [
+        ["name=login", "name"],
+        ["css=.woocommerce-Button", "css:finder"],
+        ["xpath=//button[@name='login']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Влизане')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e013a7e4-a445-42c2-9f61-fdc1c5d1cb35",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "60f1eb8d-88b3-45d7-940e-2f83038227bf",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Детайли на профила",
+      "targets": [
+        ["linkText=Детайли на профила", "linkText"],
+        ["css=.woocommerce .woocommerce-MyAccount-navigation-link--edit-account > a", "css:finder"],
+        ["xpath=(//a[contains(text(),'Детайли на профила')])[2]", "xpath:link"],
+        ["xpath=//main[@id='main']/div/div[2]/div/nav/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://petbuddy.bg/my-profile/edit-account/')])[2]", "xpath:href"],
+        ["xpath=//div[2]/div/nav/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e1d53ba1-77c3-43e6-a5dd-c72a382f7828",
+      "comment": "",
+      "command": "click",
+      "target": "id=account_last_name",
+      "targets": [
+        ["id=account_last_name", "id"],
+        ["name=account_last_name", "name"],
+        ["css=#account_last_name", "css:finder"],
+        ["xpath=//input[@id='account_last_name']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/div[2]/div/div/form/fieldset/p[2]/input", "xpath:idRelative"],
+        ["xpath=//p[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5dfed513-718b-4312-b0a1-9ccd020cd8ee",
+      "comment": "",
+      "command": "type",
+      "target": "id=account_last_name",
+      "targets": [
+        ["id=account_last_name", "id"],
+        ["name=account_last_name", "name"],
+        ["css=#account_last_name", "css:finder"],
+        ["xpath=//input[@id='account_last_name']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/div[2]/div/div/form/fieldset/p[2]/input", "xpath:idRelative"],
+        ["xpath=//p[2]/input", "xpath:position"]
+      ],
+      "value": "Станойска"
+    }, {
+      "id": "1fd61a69-4f94-4750-84ad-7dc491cbb787",
+      "comment": "",
+      "command": "click",
+      "target": "name=save_account_details",
+      "targets": [
+        ["name=save_account_details", "name"],
+        ["css=.woocommerce-Button", "css:finder"],
+        ["xpath=//button[@name='save_account_details']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/div[2]/div/div/form/p[2]/button", "xpath:idRelative"],
+        ["xpath=//p[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Запазване')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1280b5a1-2c45-49ca-b0b0-e3cc0e5c2c5b",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.woocommerce-message",
+      "targets": [
+        ["css=.woocommerce-message", "css:finder"],
+        ["xpath=//main[@id='main']/div/div[2]/div/div/div/div", "xpath:idRelative"],
+        ["xpath=//main/div/div[2]/div/div/div/div", "xpath:position"]
+      ],
+      "value": "Данните на профила бяха променени успешно."
+    }]
+  }, {
+    "id": "4a4dfb1a-455f-4497-a244-92802badd9c7",
+    "name": "EditUserProfileChangePassword",
+    "commands": [{
+      "id": "017e6fae-1a62-4d59-93a9-1cfbda807f59",
+      "comment": "",
+      "command": "open",
+      "target": "/vhod",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6fa293be-47d5-45ca-ab14-2ca78e441753",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1200x1039",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "089aa39c-590d-4a5b-86a0-80683299468c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return !document.querySelector('.woocommerce-MyAccount-navigation-link--edit-account > a')",
+      "targets": [],
+      "value": "isPresent"
+    }, {
+      "id": "bee4e661-6e55-41e0-ae11-5ebc42e199d6",
+      "comment": "",
+      "command": "if",
+      "target": "${isPresent} === true",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a19b6a67-0d3c-4240-a519-0b28abd1b530",
+      "comment": "",
+      "command": "click",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6204d9e1-8778-4c38-b085-ddd580dc1fa6",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return (typeof newEmail !== 'undefined' && vars.get('newEmail')) ? vars.get('newEmail') : \"vasilena.stanoyska@gmail.com\"",
+      "targets": [],
+      "value": "newEmail"
+    }, {
+      "id": "7b3ec133-2da8-401d-bc53-2db525ae00c3",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${newEmail}"
+    }, {
+      "id": "1cdc448f-c3a4-4ef4-9b6e-b57ce61cec1f",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f099512d-8859-4e97-95ff-c16a44c1f582",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": "Vasilena1234"
+    }, {
+      "id": "373d3068-83ed-4fd8-a9ea-cfe57cb0ad0b",
+      "comment": "",
+      "command": "click",
+      "target": "name=login",
+      "targets": [
+        ["name=login", "name"],
+        ["css=.woocommerce-Button", "css:finder"],
+        ["xpath=//button[@name='login']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Влизане')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5865c76b-1281-49d5-8a6f-a0dfba6e2d30",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fa82b81b-e639-4935-a651-449721277ac5",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Детайли на профила",
+      "targets": [
+        ["linkText=Детайли на профила", "linkText"],
+        ["css=.woocommerce-MyAccount-navigation-link--edit-account > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Детайли на профила')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://petbuddy.bg/my-profile/edit-account/')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Детайли на профила')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9f7a250e-bd6b-4659-8f43-e9deb8f282ee",
+      "comment": "",
+      "command": "click",
+      "target": "id=password_current",
+      "targets": [
+        ["id=password_current", "id"],
+        ["name=password_current", "name"],
+        ["css=#password_current", "css:finder"],
+        ["xpath=//input[@id='password_current']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/div[2]/div/div/form/fieldset[2]/p/span/input", "xpath:idRelative"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b4e3a99b-d8b6-487e-a650-22189340e8e5",
+      "comment": "",
+      "command": "type",
+      "target": "id=password_current",
+      "targets": [
+        ["id=password_current", "id"],
+        ["name=password_current", "name"],
+        ["css=#password_current", "css:finder"],
+        ["xpath=//input[@id='password_current']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/div[2]/div/div/form/fieldset[2]/p/span/input", "xpath:idRelative"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": "Vasilena1234"
+    }, {
+      "id": "0c2f16fc-d393-45b7-b139-eddc1643a68d",
+      "comment": "",
+      "command": "click",
+      "target": "id=password_1",
+      "targets": [
+        ["id=password_1", "id"],
+        ["name=password_1", "name"],
+        ["css=#password_1", "css:finder"],
+        ["xpath=//input[@id='password_1']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/div[2]/div/div/form/fieldset[2]/p[2]/span/input", "xpath:idRelative"],
+        ["xpath=//p[2]/span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bdedf0df-8e26-40bb-a548-fa2074e5a36a",
+      "comment": "",
+      "command": "type",
+      "target": "id=password_1",
+      "targets": [
+        ["id=password_1", "id"],
+        ["name=password_1", "name"],
+        ["css=#password_1", "css:finder"],
+        ["xpath=//input[@id='password_1']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/div[2]/div/div/form/fieldset[2]/p[2]/span/input", "xpath:idRelative"],
+        ["xpath=//p[2]/span/input", "xpath:position"]
+      ],
+      "value": "VasilenaStanoyska"
+    }, {
+      "id": "d351739a-5641-4743-a3ef-89c156e3e7c7",
+      "comment": "",
+      "command": "click",
+      "target": "id=password_2",
+      "targets": [
+        ["id=password_2", "id"],
+        ["name=password_2", "name"],
+        ["css=#password_2", "css:finder"],
+        ["xpath=//input[@id='password_2']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/div[2]/div/div/form/fieldset[2]/p[3]/span/input", "xpath:idRelative"],
+        ["xpath=//p[3]/span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c5b84a95-063b-451a-87c0-4e8875d8d1ca",
+      "comment": "",
+      "command": "type",
+      "target": "id=password_2",
+      "targets": [
+        ["id=password_2", "id"],
+        ["name=password_2", "name"],
+        ["css=#password_2", "css:finder"],
+        ["xpath=//input[@id='password_2']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/div[2]/div/div/form/fieldset[2]/p[3]/span/input", "xpath:idRelative"],
+        ["xpath=//p[3]/span/input", "xpath:position"]
+      ],
+      "value": "VasilenaStanoyska"
+    }, {
+      "id": "15abcf35-520c-476d-b6cb-1dcf040926e5",
+      "comment": "",
+      "command": "click",
+      "target": "name=save_account_details",
+      "targets": [
+        ["name=save_account_details", "name"],
+        ["css=.woocommerce-Button", "css:finder"],
+        ["xpath=//button[@name='save_account_details']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/div[2]/div/div/form/p[2]/button", "xpath:idRelative"],
+        ["xpath=//p[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Запазване')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0e40cc77-8993-4e51-b965-40fbfce4e461",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,104)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e82ade49-94f6-409c-9226-28a3b372bc62",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.woocommerce-message",
+      "targets": [
+        ["css=.woocommerce-message", "css:finder"],
+        ["xpath=//main[@id='main']/div/div[2]/div/div/div/div", "xpath:idRelative"],
+        ["xpath=//main/div/div[2]/div/div/div/div", "xpath:position"]
+      ],
+      "value": "Данните на профила бяха променени успешно."
+    }, {
+      "id": "b34eff95-94a5-4f07-936c-d197081fa89f",
+      "comment": "",
+      "command": "click",
+      "target": "id=password_current",
+      "targets": [
+        ["id=password_current", "id"],
+        ["name=password_current", "name"],
+        ["css=#password_current", "css:finder"],
+        ["xpath=//input[@id='password_current']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/div[2]/div/div/form/fieldset[2]/p/span/input", "xpath:idRelative"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "35042ce3-bb1f-4a25-90cc-1e2b56da9964",
+      "comment": "",
+      "command": "type",
+      "target": "id=password_current",
+      "targets": [
+        ["id=password_current", "id"],
+        ["name=password_current", "name"],
+        ["css=#password_current", "css:finder"],
+        ["xpath=//input[@id='password_current']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/div[2]/div/div/form/fieldset[2]/p/span/input", "xpath:idRelative"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": "VasilenaStanoyska"
+    }, {
+      "id": "6022e85d-7156-4c1c-a0aa-d805d15f7e2d",
+      "comment": "",
+      "command": "click",
+      "target": "id=password_1",
+      "targets": [
+        ["id=password_1", "id"],
+        ["name=password_1", "name"],
+        ["css=#password_1", "css:finder"],
+        ["xpath=//input[@id='password_1']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/div[2]/div/div/form/fieldset[2]/p[2]/span/input", "xpath:idRelative"],
+        ["xpath=//p[2]/span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cef01152-c99c-413b-bfe7-524bd01fb778",
+      "comment": "",
+      "command": "type",
+      "target": "id=password_1",
+      "targets": [
+        ["id=password_1", "id"],
+        ["name=password_1", "name"],
+        ["css=#password_1", "css:finder"],
+        ["xpath=//input[@id='password_1']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/div[2]/div/div/form/fieldset[2]/p[2]/span/input", "xpath:idRelative"],
+        ["xpath=//p[2]/span/input", "xpath:position"]
+      ],
+      "value": "Vasilena1234"
+    }, {
+      "id": "8469cb34-4900-4d90-aeff-cbecf668d739",
+      "comment": "",
+      "command": "click",
+      "target": "id=password_2",
+      "targets": [
+        ["id=password_2", "id"],
+        ["name=password_2", "name"],
+        ["css=#password_2", "css:finder"],
+        ["xpath=//input[@id='password_2']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/div[2]/div/div/form/fieldset[2]/p[3]/span/input", "xpath:idRelative"],
+        ["xpath=//p[3]/span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5ebfcb6d-7f28-40a0-a111-e271758e7b49",
+      "comment": "",
+      "command": "type",
+      "target": "id=password_2",
+      "targets": [
+        ["id=password_2", "id"],
+        ["name=password_2", "name"],
+        ["css=#password_2", "css:finder"],
+        ["xpath=//input[@id='password_2']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/div[2]/div/div/form/fieldset[2]/p[3]/span/input", "xpath:idRelative"],
+        ["xpath=//p[3]/span/input", "xpath:position"]
+      ],
+      "value": "Vasilena1234"
+    }, {
+      "id": "695fa27a-b445-42e2-8768-4367eabc6d53",
+      "comment": "",
+      "command": "click",
+      "target": "name=save_account_details",
+      "targets": [
+        ["name=save_account_details", "name"],
+        ["css=.woocommerce-Button", "css:finder"],
+        ["xpath=//button[@name='save_account_details']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/div[2]/div/div/form/p[2]/button", "xpath:idRelative"],
+        ["xpath=//p[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Запазване')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a626cf7c-acd8-44c3-8b2e-5b5c5f1e7d0a",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.woocommerce-message",
+      "targets": [
+        ["css=.woocommerce-message", "css:finder"],
+        ["xpath=//main[@id='main']/div/div[2]/div/div/div/div", "xpath:idRelative"],
+        ["xpath=//main/div/div[2]/div/div/div/div", "xpath:position"]
+      ],
+      "value": "Данните на профила бяха променени успешно."
+    }]
+  }, {
+    "id": "3954784b-d7b1-48d8-9632-a86c0228b880",
+    "name": "CreatePetBox",
+    "commands": [{
+      "id": "f061b34a-f074-47bc-bda2-bc81c3e0944d",
+      "comment": "",
+      "command": "open",
+      "target": "/vhod",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a90ee387-6e72-4460-b832-e6108a83e500",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1200x1039",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b7521a16-727a-43ab-838d-f380dcd485be",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return !document.querySelector('.woocommerce-MyAccount-navigation-link--edit-account > a')",
+      "targets": [],
+      "value": "isPresent"
+    }, {
+      "id": "51089d2b-8cb1-4ce5-84c1-bae2e7c74727",
+      "comment": "",
+      "command": "if",
+      "target": "${isPresent} === true",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "17d75ba9-7f9d-4549-a9d5-1bc3d8f7be0b",
+      "comment": "",
+      "command": "click",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5dd6aec5-b347-4bbd-9196-7f3ca3c7da64",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return (typeof newEmail !== 'undefined' && vars.get('newEmail')) ? vars.get('newEmail') : \"vasilena.stanoyska@gmail.com\"",
+      "targets": [],
+      "value": "newEmail"
+    }, {
+      "id": "b791e519-fdbc-4a57-bdaf-058c08f7f73a",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${newEmail}"
+    }, {
+      "id": "4589ab93-69cd-4899-8e76-2d5c0f777e5b",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "37ae4102-e914-4a96-917f-f2b2eb70cf68",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": "Vasilena1234"
+    }, {
+      "id": "87224b5d-6126-470b-a3c2-64be35e1ebad",
+      "comment": "",
+      "command": "click",
+      "target": "name=login",
+      "targets": [
+        ["name=login", "name"],
+        ["css=.woocommerce-Button", "css:finder"],
+        ["xpath=//button[@name='login']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Влизане')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9174c4d3-8b50-4eae-b5f7-d684d4e753d5",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8505eaff-21da-43d0-9797-ba6201e7acb2",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Моите любимци",
+      "targets": [
+        ["linkText=Моите любимци", "linkText"],
+        ["css=.woocommerce .woocommerce-MyAccount-navigation-link--pets > a", "css:finder"],
+        ["xpath=(//a[contains(text(),'Моите любимци')])[3]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'https://petbuddy.bg/my-profile/pets/')])[10]", "xpath:href"],
+        ["xpath=//div[3]/div/div/nav/ul/li[4]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ee6c479c-654f-43e5-8dae-7e72eec79ec6",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Създай",
+      "targets": [
+        ["linkText=Създай", "linkText"],
+        ["css=.textbox > .btn", "css:finder"],
+        ["xpath=(//a[contains(text(),'Създай')])[2]", "xpath:link"],
+        ["xpath=//main[@id='main']/div/div[2]/div/div/div[5]/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://petbuddy.bg/pet-box/bundle/?pet=76216#calculate')]", "xpath:href"],
+        ["xpath=//div[5]/div/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d2322af5-f46d-471e-99a6-d025c3850e33",
+      "comment": "",
+      "command": "click",
+      "target": "css=.product-item:nth-child(4) path",
+      "targets": [
+        ["css=.product-item:nth-child(4) path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "11489ac9-0f85-4fd2-ac52-6a16424078c5",
+      "comment": "",
+      "command": "click",
+      "target": "css=#testimonial_send_10473 .btn-primary",
+      "targets": [
+        ["css=#testimonial_send_10473 .btn-primary", "css:finder"],
+        ["xpath=(//button[@value='toys'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='testimonial_send_10473']/div/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div/div/div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8cb1452e-f288-4f63-abd2-de296601e434",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Моят профил",
+      "targets": [
+        ["linkText=Моят профил", "linkText"],
+        ["css=.woocommerce-MyAccount-navigation-link--dashboard > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Моят профил')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://petbuddy.bg/my-profile/')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Моят профил')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bfb64bd2-6629-4f65-9176-9ee5a8c5c0f9",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Моите любимци",
+      "targets": [
+        ["linkText=Моите любимци", "linkText"],
+        ["css=.woocommerce .woocommerce-MyAccount-navigation-link--pets > a", "css:finder"],
+        ["xpath=(//a[contains(text(),'Моите любимци')])[3]", "xpath:link"],
+        ["xpath=//main[@id='main']/div/div[2]/div/nav/ul/li[4]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://petbuddy.bg/my-profile/pets/')])[10]", "xpath:href"],
+        ["xpath=//div[2]/div/nav/ul/li[4]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4b0851e4-426d-4f39-aa5e-cef610464a20",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Създай",
+      "targets": [
+        ["linkText=Създай", "linkText"],
+        ["css=.textbox > .btn", "css:finder"],
+        ["xpath=(//a[contains(text(),'Създай')])[2]", "xpath:link"],
+        ["xpath=//main[@id='main']/div/div[2]/div/div/div[5]/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://petbuddy.bg/pet-box/bundle/?pet=76216#calculate')]", "xpath:href"],
+        ["xpath=//div[5]/div/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "faa02b0d-2b5c-4d31-a7a7-3f6dd01b12b8",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.product-item:nth-child(4) h5",
+      "targets": [
+        ["css=.product-item:nth-child(4) h5", "css:finder"],
+        ["xpath=//div[4]/div/div[2]/h5", "xpath:position"]
+      ],
+      "value": "Няма избран продукт"
+    }, {
+      "id": "0909b61e-e445-4710-91c5-b11dcf01f08c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.product-item:nth-child(4) button",
+      "targets": [
+        ["css=.product-item:nth-child(4) button", "css:finder"],
+        ["xpath=(//button[@name='change_product'])[4]", "xpath:attributes"],
+        ["xpath=//div[4]/div/div[4]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "edb089e7-312f-4fe7-9d0a-536fe51e5fa7",
+      "comment": "",
+      "command": "click",
+      "target": "css=form:nth-child(3) .btn",
+      "targets": [
+        ["css=form:nth-child(3) .btn", "css:finder"],
+        ["xpath=(//button[@name='submit'])[3]", "xpath:attributes"],
+        ["xpath=//form[3]/div/button", "xpath:position"]
+      ],
+      "value": ""
     }]
   }],
   "suites": [{
