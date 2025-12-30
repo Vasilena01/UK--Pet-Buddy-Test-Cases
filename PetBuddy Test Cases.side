@@ -3453,6 +3453,901 @@
       ],
       "value": ""
     }]
+  }, {
+    "id": "cac92ff4-cc08-4504-b102-303dac4e746b",
+    "name": "AddProductToCart",
+    "commands": [{
+      "id": "50da943a-2f9a-4520-baf3-bf7deeb7a14c",
+      "comment": "",
+      "command": "open",
+      "target": "/cart",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f070b13f-4283-49eb-a555-e41b60fbc001",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//div[contains(@class, 'cart-empty')]",
+      "targets": [],
+      "value": "count"
+    }, {
+      "id": "6dc3d0a0-df38-43e8-bac6-15f59fba5929",
+      "comment": "",
+      "command": "if",
+      "target": "${count} == 0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2245d51f-b2a4-414c-9284-3ad0b21ca026",
+      "comment": "",
+      "command": "do",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "793452a9-2303-406f-8848-8c3b3eac9602",
+      "comment": "",
+      "command": "click",
+      "target": "css=.remove-from-cart-modal-btn path:nth-child(2)",
+      "targets": [
+        ["css=.remove-from-cart-modal-btn path:nth-child(2)", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "abb95ca8-e8c4-4ff9-ad80-de6e1f8d0a02",
+      "comment": "",
+      "command": "click",
+      "target": "css=.delete-product-from-cart",
+      "targets": [
+        ["css=.delete-product-from-cart", "css:finder"],
+        ["xpath=//button[@value='9cd040537e45e864c793af08f08eab4f']", "xpath:attributes"],
+        ["xpath=//div[@id='remove-from-cart-modal']/div/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e6e7e702-149b-487e-bfab-62bea483f698",
+      "comment": "",
+      "command": "waitForElementNotPresent",
+      "target": "css=.blockUI",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "d8594fef-0c24-483d-8ad8-9736fc7956e8",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.container",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "77141d53-d06e-461e-bbd3-c5efb7ae3650",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//div[contains(@class, 'cart-empty')]",
+      "targets": [],
+      "value": "count"
+    }, {
+      "id": "b517f66f-c724-4feb-bbcc-d37fab72a792",
+      "comment": "",
+      "command": "repeatIf",
+      "target": "${count} == 0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8ffcfbf3-6bf4-48f8-8d06-e4b9ec2bcf53",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2744feda-1fbe-4fd2-b65a-b2d483dc199f",
+      "comment": "",
+      "command": "open",
+      "target": "category/kuche/lakomstva-za-kucheta/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e2a7a3fe-bd0e-4e13-b84b-73c37754b5d5",
+      "comment": "",
+      "command": "click",
+      "target": "css=ul.products li:first-child a",
+      "targets": [
+        ["css=.post-74789", "css:finder"],
+        ["xpath=//main[@id='main']/div[2]/div[2]/div[2]/ul/li", "xpath:idRelative"],
+        ["xpath=//div[2]/ul/li", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "20d2a00b-a8ad-40f7-b818-96a30e744957",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.product_title",
+      "targets": [
+        ["css=.product_title", "css:finder"],
+        ["xpath=//main[@id='main']/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Acana Adult Dog 11.4 кг – Суха храна за кучета')]", "xpath:innerText"]
+      ],
+      "value": "productName"
+    }, {
+      "id": "fa2b1177-0e70-4b32-bcff-54a79b87fd0a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.single-to-cart > .pric",
+      "targets": [
+        ["css=.single-to-cart > .pric", "css:finder"],
+        ["xpath=//div[@id='product-1480']/div[2]/div[2]/form/div/div[2]/label", "xpath:idRelative"],
+        ["xpath=//div[2]/label", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c4178efe-a3f8-4d2b-9d7b-5752b8c739a5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.single_add_to_cart_button",
+      "targets": [
+        ["name=add-to-cart", "name"],
+        ["css=.regular", "css:finder"],
+        ["xpath=//button[@name='add-to-cart']", "xpath:attributes"],
+        ["xpath=//div[@id='product-1480']/div[2]/div[2]/form/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Добавяне в количката')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0744ff9e-2dea-4545-bea3-2b3d59b1dab9",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.modal-dialog .modal-title",
+      "targets": [
+        ["css=.modal-lg .modal-title", "css:finder"],
+        ["xpath=//div[@id='addtocart_modal']/div/div/div/h5", "xpath:idRelative"],
+        ["xpath=//div[19]/div/div/div/h5", "xpath:position"],
+        ["xpath=//h5[contains(.,'Продукта е успешно добавен в количката')]", "xpath:innerText"]
+      ],
+      "value": "Продукта е успешно добавен в количката"
+    }, {
+      "id": "d7919c5f-b5ab-49ef-89fb-a53432e2cbe7",
+      "comment": "",
+      "command": "open",
+      "target": "/cart",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dd72bc54-7bf7-45da-b9cd-8756d54343b8",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.product-name > a",
+      "targets": [],
+      "value": "productNameCart"
+    }, {
+      "id": "0f7f18f9-8598-4085-a2d1-6b5e94b1342c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "p = ${productName}; return p.replace(/[^a-zA-Z0-9 ]+/g, \"\")",
+      "targets": [],
+      "value": "productName"
+    }, {
+      "id": "84c228ac-6462-4fc1-a0f9-20a5146ed83d",
+      "comment": "",
+      "command": "executeScript",
+      "target": "p = ${productNameCart}; return p.replace(/[^a-zA-Z0-9 ]+/g, \"\"); ",
+      "targets": [],
+      "value": "productNameCart"
+    }, {
+      "id": "be3b1c33-a5a0-4f19-9eed-83644971544b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "a = ${productName}; b = ${productNameCart}; return a === b;",
+      "targets": [],
+      "value": "result"
+    }, {
+      "id": "e7fca411-9e84-4494-8085-9ecbccdbd21d",
+      "comment": "",
+      "command": "assert",
+      "target": "result",
+      "targets": [],
+      "value": "true"
+    }]
+  }, {
+    "id": "5104988a-2a99-46e4-96c7-7445d62b2344",
+    "name": "AddProductToWishList",
+    "commands": [{
+      "id": "cdbc283d-69b3-41a1-bfcd-1841b7c948d3",
+      "comment": "",
+      "command": "open",
+      "target": "category/kuche/lakomstva-za-kucheta/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a79455d0-9c0a-4a95-87ba-d5456ccea8c2",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=ul.products li:first-child h2.woocommerce-loop-product__title",
+      "targets": [],
+      "value": "productName"
+    }, {
+      "id": "f3cbc646-4fad-4652-baaf-4d0062f8bd37",
+      "comment": "",
+      "command": "click",
+      "target": "css=ul.products li:first-child button.woosw-btn",
+      "targets": [
+        ["css=.post-74789", "css:finder"],
+        ["xpath=//main[@id='main']/div[2]/div[2]/div[2]/ul/li", "xpath:idRelative"],
+        ["xpath=//div[2]/ul/li", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0dda2484-8050-44f9-aca9-e300309a607c",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=#woosw_wishlist span.woosw-name",
+      "targets": [
+        ["css=.modal-lg .modal-title", "css:finder"],
+        ["xpath=//div[@id='addtocart_modal']/div/div/div/h5", "xpath:idRelative"],
+        ["xpath=//div[19]/div/div/div/h5", "xpath:position"],
+        ["xpath=//h5[contains(.,'Продукта е успешно добавен в количката')]", "xpath:innerText"]
+      ],
+      "value": "Любими продукти"
+    }, {
+      "id": "55bbbe83-5b4d-42fa-815f-267fe489e5cb",
+      "comment": "",
+      "command": "click",
+      "target": "css=a.woosw-page",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c89cd6c1-4bb7-41fb-a49c-965a6ff1ab4c",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=div.woosw-item--name a",
+      "targets": [],
+      "value": "productNameInWishlist"
+    }, {
+      "id": "5a626d68-36d1-42e4-af5b-b066172413cc",
+      "comment": "",
+      "command": "executeScript",
+      "target": "name=${productName}; return name.replace(/[^a-zA-Z0-9]+/g, \"\")",
+      "targets": [],
+      "value": "productName"
+    }, {
+      "id": "f142b4db-60ee-46de-89fe-9b946ee9e74b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "name=${productNameInWishlist}; return name.replace(/[^a-zA-Z0-9]+/g, \"\")",
+      "targets": [],
+      "value": "productNameInWishlist"
+    }, {
+      "id": "b49bde0f-61e4-4d52-8038-eccd79776507",
+      "comment": "",
+      "command": "echo",
+      "target": "${productNameInWishlist}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "172d91d0-69ad-466c-b540-af1e264588ba",
+      "comment": "",
+      "command": "echo",
+      "target": "${productName}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b8796d96-fed8-42c6-991e-6f6fdc8b3505",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${productName} === ${productNameInWishlist};",
+      "targets": [],
+      "value": "result"
+    }, {
+      "id": "ebaa8275-2d7d-44d2-affe-3600f0b0be49",
+      "comment": "",
+      "command": "assert",
+      "target": "result",
+      "targets": [],
+      "value": "true"
+    }]
+  }, {
+    "id": "e83d900b-6cd4-457a-856a-a5ba8b7f3525",
+    "name": "RemoveProductFromCart",
+    "commands": [{
+      "id": "caac9843-9f77-490f-b7a6-a6d2778dfeda",
+      "comment": "",
+      "command": "open",
+      "target": "category/kuche/lakomstva-za-kucheta/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c8c9c613-a1a9-4055-9595-f94240b3eb0a",
+      "comment": "",
+      "command": "click",
+      "target": "css=ul.products li:first-child a",
+      "targets": [
+        ["css=.post-74789", "css:finder"],
+        ["xpath=//main[@id='main']/div[2]/div[2]/div[2]/ul/li", "xpath:idRelative"],
+        ["xpath=//div[2]/ul/li", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ea9e9abb-ada5-4b9d-8e67-39776ab40ebd",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.product_title",
+      "targets": [
+        ["css=.product_title", "css:finder"],
+        ["xpath=//main[@id='main']/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Acana Adult Dog 11.4 кг – Суха храна за кучета')]", "xpath:innerText"]
+      ],
+      "value": "productName"
+    }, {
+      "id": "d07dc1e0-368e-4f11-adbb-196c04d88457",
+      "comment": "",
+      "command": "click",
+      "target": "css=.single-to-cart > .pric",
+      "targets": [
+        ["css=.single-to-cart > .pric", "css:finder"],
+        ["xpath=//div[@id='product-1480']/div[2]/div[2]/form/div/div[2]/label", "xpath:idRelative"],
+        ["xpath=//div[2]/label", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7dbf62fd-14b7-469a-96f1-49e4f288119d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.single_add_to_cart_button",
+      "targets": [
+        ["name=add-to-cart", "name"],
+        ["css=.regular", "css:finder"],
+        ["xpath=//button[@name='add-to-cart']", "xpath:attributes"],
+        ["xpath=//div[@id='product-1480']/div[2]/div[2]/form/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Добавяне в количката')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1647a8fd-abe7-4f01-ac30-51f4fb821b0e",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.modal-dialog .modal-title",
+      "targets": [
+        ["css=.modal-lg .modal-title", "css:finder"],
+        ["xpath=//div[@id='addtocart_modal']/div/div/div/h5", "xpath:idRelative"],
+        ["xpath=//div[19]/div/div/div/h5", "xpath:position"],
+        ["xpath=//h5[contains(.,'Продукта е успешно добавен в количката')]", "xpath:innerText"]
+      ],
+      "value": "Продукта е успешно добавен в количката"
+    }, {
+      "id": "3140edbd-0351-40eb-866a-aa28803d97e1",
+      "comment": "",
+      "command": "open",
+      "target": "/cart",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0421c117-773c-4c90-88a9-dd81c9eafcf9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.product-remove-modal a",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6484d059-e171-46c2-8e26-b06a017b92cb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.modal-footer button.delete-product-from-cart",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4e849056-e02b-44f5-8b5b-58a704931e23",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=div.woocommerce-message",
+      "targets": [],
+      "value": "removedProductName"
+    }, {
+      "id": "33186e0b-a0d4-4d7e-8d9e-71c3ac5fe8c2",
+      "comment": "",
+      "command": "echo",
+      "target": "${removedProductName}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f07799b4-419c-47c3-854e-ee3e9cb55718",
+      "comment": "",
+      "command": "echo",
+      "target": "${productName}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "96b7eead-9378-4670-8dee-b1d213ad0136",
+      "comment": "",
+      "command": "executeScript",
+      "target": "removed = ${removedProductName}; const match = removed.match(/„([^“]+)“/); return match ? match[1].replace(/[^a-zA-Z0-9 ]+/g, \"\"): \"Not Found\";",
+      "targets": [],
+      "value": "removedProductName"
+    }, {
+      "id": "64c775e1-e4b6-47cb-aabe-0c501604a02c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "p = ${productName}; return p.replace(/[^a-zA-Z0-9 ]+/g, \"\")",
+      "targets": [],
+      "value": "productName"
+    }, {
+      "id": "30b31d8e-f0f4-43bf-b38c-0464a92f4831",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${productName} == ${removedProductName};",
+      "targets": [],
+      "value": "result"
+    }, {
+      "id": "dda64e3a-d13f-4924-8278-921c2ea485bf",
+      "comment": "",
+      "command": "assert",
+      "target": "result",
+      "targets": [],
+      "value": "true"
+    }]
+  }, {
+    "id": "9b32acfc-4068-42e0-8f57-a1edb56a354d",
+    "name": "RemoveProductFromWishlist",
+    "commands": [{
+      "id": "f451f2a0-5a56-4762-a815-e2a8863cf548",
+      "comment": "",
+      "command": "open",
+      "target": "category/kuche/lakomstva-za-kucheta/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "af1f4201-b2f4-4cbf-8814-72a0c167b444",
+      "comment": "",
+      "command": "click",
+      "target": "css=ul.products li:first-child button.woosw-btn",
+      "targets": [
+        ["css=.post-74789", "css:finder"],
+        ["xpath=//main[@id='main']/div[2]/div[2]/div[2]/ul/li", "xpath:idRelative"],
+        ["xpath=//div[2]/ul/li", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dd504e50-e255-47d7-9d25-1d5e42cbe1ba",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=#woosw_wishlist span.woosw-name",
+      "targets": [
+        ["css=.modal-lg .modal-title", "css:finder"],
+        ["xpath=//div[@id='addtocart_modal']/div/div/div/h5", "xpath:idRelative"],
+        ["xpath=//div[19]/div/div/div/h5", "xpath:position"],
+        ["xpath=//h5[contains(.,'Продукта е успешно добавен в количката')]", "xpath:innerText"]
+      ],
+      "value": "Любими продукти"
+    }, {
+      "id": "cf77e7b7-f047-4eb7-9cba-ef439176b61b",
+      "comment": "",
+      "command": "click",
+      "target": "css=a.woosw-page",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f68aef17-2dad-4e3a-b94a-5c47fd270975",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=div.woosw-item--name a",
+      "targets": [],
+      "value": "productNameInWishlist"
+    }, {
+      "id": "b5772540-a077-4f37-9e3f-291ace522a73",
+      "comment": "",
+      "command": "click",
+      "target": "css=.woosw-item--remove",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "8bee8cc4-167e-472e-8b7c-77dfda039552",
+    "name": "SearchingProducts",
+    "commands": [{
+      "id": "8b32d81a-b4af-4613-9d9a-278caf30c103",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3a01b9a6-c981-41d0-9f25-b19126ebdd78",
+      "comment": "",
+      "command": "executeScript",
+      "target": "document.documentElement.requestFullscreen();",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3fbe6032-38d0-4755-b7a5-b620436b3cc0",
+      "comment": "",
+      "command": "click",
+      "target": "id=woocommerce-product-search-field-0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9dd990d8-247f-477a-9c30-3a268cbae292",
+      "comment": "",
+      "command": "type",
+      "target": "id=woocommerce-product-search-field-0",
+      "targets": [],
+      "value": "Biogance Plouf"
+    }, {
+      "id": "040d58b0-4b2f-4ff0-a7a3-04fda15bbf52",
+      "comment": "",
+      "command": "click",
+      "target": "css=.search-box-wrapper svg",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2e36c500-1b45-4a6f-a0a0-4081a85b1192",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.col-md-9",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "eab2e2b3-ba83-4ef2-97cb-6dff275032e2",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Array.from(document.getElementsByClassName(\"woocommerce-loop-product__title\")).map(s => s.innerText.includes('Biogance Plouf'))",
+      "targets": [],
+      "value": "results"
+    }, {
+      "id": "04eeb306-5ba7-4f86-b353-6fc11b967c91",
+      "comment": "",
+      "command": "forEach",
+      "target": "results",
+      "targets": [],
+      "value": "current"
+    }, {
+      "id": "746e3c32-6216-42bd-ae5d-3fed3c1c8907",
+      "comment": "",
+      "command": "assert",
+      "target": "current",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "9b58d60e-00b1-4622-84f7-f0c318b3a94f",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "3dc6a0b1-2d2d-4c8b-883e-2b4fc08947dd",
+    "name": "CatalogPagination",
+    "commands": [{
+      "id": "737dfe94-ea02-49a9-8718-ce34bd497ee1",
+      "comment": "",
+      "command": "open",
+      "target": "category/kuche/lakomstva-za-kucheta/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c9eeace6-66fa-4c17-a631-d3ce5dbf182e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=2",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7cd4e67c-7015-4208-8c3f-8bdd8d60d639",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.woocommerce-result-count",
+      "targets": [],
+      "value": "secondPageElements"
+    }, {
+      "id": "47b7e5b6-87d6-4e5d-a09e-81fb848c7074",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href.replace(/\\/$/, '').split(\"/\").pop();",
+      "targets": [],
+      "value": "secondPageNumber"
+    }, {
+      "id": "f26c44a3-52db-4f36-8af6-441a9a1e71fa",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=3",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "de3bae29-9f00-43d1-9659-c5ee073f4fa7",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.woocommerce-result-count",
+      "targets": [],
+      "value": "thirdPageElements"
+    }, {
+      "id": "adc5328d-1797-4254-bacc-7ea189243bb7",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href.replace(/\\/$/, '').split(\"/\").pop();",
+      "targets": [],
+      "value": "thirdPageNumber"
+    }, {
+      "id": "986dc432-67e6-4ec6-a1f0-4d641ff5a67f",
+      "comment": "",
+      "command": "executeScript",
+      "target": "elements = ${secondPageElements}; count = elements.match(\"([0-9]+–[0-9]+)\")[0].split(\"–\")[1];return count;",
+      "targets": [],
+      "value": "endSecondPage"
+    }, {
+      "id": "b616eb1a-12da-407e-a6d9-d11016482c27",
+      "comment": "",
+      "command": "executeScript",
+      "target": "elements = ${thirdPageElements}; count= elements.match(\"([0-9]+–[0-9]+)\")[0].split(\"–\")[0];return count;",
+      "targets": [],
+      "value": "startThirdPage"
+    }, {
+      "id": "2cf7bc3f-45ed-4631-9e4d-97bdc6fd9761",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return (parseInt(${secondPageNumber})+1 == parseInt(${thirdPageNumber})) && (parseInt(${endSecondPage})+1 == parseInt(${startThirdPage})) ",
+      "targets": [],
+      "value": "result"
+    }, {
+      "id": "1b1232aa-f764-42e2-8e3f-d444648bcd11",
+      "comment": "",
+      "command": "assert",
+      "target": "result",
+      "targets": [],
+      "value": "true"
+    }]
+  }, {
+    "id": "8f01421b-335c-437e-9cf9-45b6862ecc8a",
+    "name": "PageNotFound",
+    "commands": [{
+      "id": "b7cf9857-4abf-45aa-bd41-b19afa34e998",
+      "comment": "",
+      "command": "open",
+      "target": "/non-existing-page",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "886fc341-861f-44bb-8cf3-0020b91e22e1",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.error-404-icon",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "f52771b2-c623-4949-a30f-3fb537a99c3d",
+    "name": "PageResultCount",
+    "commands": [{
+      "id": "ca5c6d7a-a541-4eee-b6a7-4284368b6a2f",
+      "comment": "",
+      "command": "open",
+      "target": "category/kuche/lakomstva-za-kucheta/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "51b0575f-77ab-4a52-90e6-cd47bac3b01a",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//ul[contains(@class, 'products')]/li",
+      "targets": [],
+      "value": "elementsCount"
+    }, {
+      "id": "8627b56b-5761-4668-828f-b26e278d4202",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.woocommerce-result-count",
+      "targets": [],
+      "value": "range"
+    }, {
+      "id": "ac8b769b-3954-47dd-beeb-d042934672df",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return parseInt(${range}.match(\"([0-9]+–[0-9]+)\")[0].split(\"–\")[1])-parseInt(${range}.match(\"([0-9]+–[0-9]+)\")[0].split(\"–\")[0])+1",
+      "targets": [],
+      "value": "count"
+    }, {
+      "id": "ec5da0f7-c060-432b-83cf-a79e3a273476",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return parseInt(${elementsCount}) == parseInt(${count})",
+      "targets": [],
+      "value": "result"
+    }, {
+      "id": "54d8936a-c7a2-4216-8f04-934dd9e48640",
+      "comment": "",
+      "command": "assert",
+      "target": "result",
+      "targets": [],
+      "value": "true"
+    }]
+  }, {
+    "id": "88181504-3d39-4c7f-acca-d06e36e30da8",
+    "name": "CartProductsPrice",
+    "commands": [{
+      "id": "876ddca3-696c-4880-961d-6478af0ccde9",
+      "comment": "",
+      "command": "open",
+      "target": "/cart",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bf70a775-2cad-4d39-9c4d-26aec4f39ded",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//div[contains(@class, 'cart-empty')]",
+      "targets": [],
+      "value": "count"
+    }, {
+      "id": "f08e2010-8981-4609-b204-27dda8b94bc7",
+      "comment": "",
+      "command": "if",
+      "target": "${count} == 0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d13a6584-ee14-494a-8805-2ad47ba8859c",
+      "comment": "",
+      "command": "do",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c2049fa6-8205-42e3-826b-2c4aa03c523a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.remove-from-cart-modal-btn path:nth-child(2)",
+      "targets": [
+        ["css=.remove-from-cart-modal-btn path:nth-child(2)", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "1bc6f69a-dc7c-48e8-b4c3-dca4e6b0a6e8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.delete-product-from-cart",
+      "targets": [
+        ["css=.delete-product-from-cart", "css:finder"],
+        ["xpath=//button[@value='9cd040537e45e864c793af08f08eab4f']", "xpath:attributes"],
+        ["xpath=//div[@id='remove-from-cart-modal']/div/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b2b8325-89f5-4b5d-b537-eb2c841a9bdb",
+      "comment": "",
+      "command": "waitForElementNotPresent",
+      "target": "css=.blockUI",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "763c07b7-99df-42b6-b9fc-b2833501b856",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.container",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "e11f6201-6900-4ba3-8c59-d760c9b97a35",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//div[contains(@class, 'cart-empty')]",
+      "targets": [],
+      "value": "count"
+    }, {
+      "id": "11df38e8-b376-4533-bc62-a6cb9ec05010",
+      "comment": "",
+      "command": "repeatIf",
+      "target": "${count} == 0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7e05bf18-eba1-47df-9ce8-3f4dad0f6ca4",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e5e91d57-18cb-435e-96f1-a741e7a8513a",
+      "comment": "",
+      "command": "open",
+      "target": "category/kuche/lakomstva-za-kucheta/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c1399da5-aee4-4a2b-927c-f2bb7d054a47",
+      "comment": "",
+      "command": "click",
+      "target": "css=ul.products li:first-child a",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d06338f7-2120-46b7-ab74-572ce34e40df",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.single-to-cart-price h5",
+      "targets": [],
+      "value": "currentProductPriceText"
+    }, {
+      "id": "cddc5fb5-55e4-4486-b434-8b5bc7634b0f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.single-to-cart > .pric",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "849be0e9-b947-48db-b236-8bfff37a59b4",
+      "comment": "",
+      "command": "click",
+      "target": "name=add-to-cart",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "64f6e6db-3a4b-4cfb-af3f-2d4f0ef5dbfd",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "162a7819-a370-4305-9893-53b90048804f",
+      "comment": "",
+      "command": "open",
+      "target": "/cart",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7ec85547-a43e-4d0e-ac16-af28d2257a3a",
+      "comment": "",
+      "command": "type",
+      "target": "css=div.quantity input",
+      "targets": [],
+      "value": "3"
+    }, {
+      "id": "4942946c-e52d-43f5-be8b-5b246cef5fc8",
+      "comment": "",
+      "command": "waitForElementNotPresent",
+      "target": "css=.blockUI",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "3d31091d-67fa-4bea-9d48-ab0984d45e3d",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=td:nth-child(2) > .woocommerce-Price-amount > bdi",
+      "targets": [],
+      "value": "cartPrice"
+    }, {
+      "id": "31818abe-508f-45f7-ba81-7c73e63ba53c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "priceText = ${currentProductPriceText}; return parseFloat(priceText.slice(0,-4)) * 3;",
+      "targets": [],
+      "value": "expectedCartPrice"
+    }, {
+      "id": "31273624-a419-433e-93b9-ac69802919f2",
+      "comment": "",
+      "command": "executeScript",
+      "target": "price = ${cartPrice}; return parseFloat(price.slice(0,-4)) ;",
+      "targets": [],
+      "value": "cartPrice"
+    }, {
+      "id": "fffea5b5-3454-4430-8492-2f3195b94cda",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${expectedCartPrice} == ${cartPrice};",
+      "targets": [],
+      "value": "result"
+    }, {
+      "id": "432a0f00-3708-44b2-b87a-976522a69143",
+      "comment": "",
+      "command": "assert",
+      "target": "result",
+      "targets": [],
+      "value": "true"
+    }]
   }],
   "suites": [{
     "id": "e9ee2cf8-231e-4ab4-9a77-311d7d4b62de",
@@ -3461,6 +4356,13 @@
     "parallel": false,
     "timeout": 300,
     "tests": ["99512dfc-84a3-4201-ae9b-93ab3cd8f9e1", "aa353fc6-c1fc-4f81-ac10-1ec8ec755ce6", "216f950c-68f5-44f8-850f-8eeca00bb45e", "22328705-bd4f-4535-952b-3bd5041de260", "5cbeeb42-36f0-40c3-a441-1a7d767462e5", "a56d84bf-6a70-4279-b12a-05aa5f36d5aa", "abac16b1-382e-4459-a599-6d5b75a7ed93"]
+  }, {
+    "id": "ea25b96d-8b31-44ee-b5ce-45d3992c472f",
+    "name": "Shopping",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["cac92ff4-cc08-4504-b102-303dac4e746b", "5104988a-2a99-46e4-96c7-7445d62b2344", "88181504-3d39-4c7f-acca-d06e36e30da8", "3dc6a0b1-2d2d-4c8b-883e-2b4fc08947dd", "f52771b2-c623-4949-a30f-3fb537a99c3d", "e83d900b-6cd4-457a-856a-a5ba8b7f3525", "9b32acfc-4068-42e0-8f57-a1edb56a354d", "8bee8cc4-167e-472e-8b7c-77dfda039552"]
   }],
   "urls": ["https://petbuddy.bg/"],
   "plugins": []
