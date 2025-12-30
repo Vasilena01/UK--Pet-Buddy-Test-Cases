@@ -459,19 +459,6 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "19743f92-1997-4b9f-af7f-12b0e66269df",
-      "comment": "",
-      "command": "click",
-      "target": "linkText=Излизане",
-      "targets": [
-        ["linkText=Излизане", "linkText"],
-        ["css=.woocommerce .woocommerce-MyAccount-navigation-link--customer-logout > a", "css:finder"],
-        ["xpath=(//a[contains(text(),'Излизане')])[2]", "xpath:link"],
-        ["xpath=(//a[contains(@href, 'https://petbuddy.bg/my-profile/customer-logout/?_wpnonce=6049862fcf')])[2]", "xpath:href"],
-        ["xpath=//div[4]/div/div/nav/ul/li[9]/a", "xpath:position"]
-      ],
-      "value": ""
-    }, {
       "id": "172b8575-773f-4ec3-9514-042a0d29688b",
       "comment": "",
       "command": "click",
@@ -673,19 +660,6 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "3700d298-c375-455a-a788-b2f957a04d6e",
-      "comment": "",
-      "command": "click",
-      "target": "linkText=Излизане",
-      "targets": [
-        ["linkText=Излизане", "linkText"],
-        ["css=.woocommerce .woocommerce-MyAccount-navigation-link--customer-logout > a", "css:finder"],
-        ["xpath=(//a[contains(text(),'Излизане')])[2]", "xpath:link"],
-        ["xpath=(//a[contains(@href, 'https://petbuddy.bg/my-profile/customer-logout/?_wpnonce=6049862fcf')])[2]", "xpath:href"],
-        ["xpath=//div[4]/div/div/nav/ul/li[9]/a", "xpath:position"]
-      ],
-      "value": ""
-    }, {
       "id": "6bf1fcaf-8b98-4e6b-8821-3b1826c3fe5b",
       "comment": "",
       "command": "click",
@@ -863,19 +837,6 @@
       "command": "open",
       "target": "/vhod",
       "targets": [],
-      "value": ""
-    }, {
-      "id": "cee33700-6910-4ae6-ab94-27f2ffb51cdb",
-      "comment": "",
-      "command": "click",
-      "target": "linkText=Излизане",
-      "targets": [
-        ["linkText=Излизане", "linkText"],
-        ["css=.woocommerce .woocommerce-MyAccount-navigation-link--customer-logout > a", "css:finder"],
-        ["xpath=(//a[contains(text(),'Излизане')])[2]", "xpath:link"],
-        ["xpath=(//a[contains(@href, 'https://petbuddy.bg/my-profile/customer-logout/?_wpnonce=6049862fcf')])[2]", "xpath:href"],
-        ["xpath=//div[4]/div/div/nav/ul/li[9]/a", "xpath:position"]
-      ],
       "value": ""
     }, {
       "id": "cdede5c1-104e-4fde-ae53-9b7301a34948",
